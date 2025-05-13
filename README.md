@@ -1,54 +1,71 @@
-# React + TypeScript + Vite
+# Meta-Space
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+React、Three.js、React Three Fiberで構築された仮想3D環境です。
 
-Currently, two official plugins are available:
+## スクリーンショット
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+ゲーム内のスクリーンショットです：
 
-## Expanding the ESLint configuration
+![カメラビュー 1](./camera1.png)
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+![カメラビュー 2](./camera2.png)
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+![カメラビュー 3](./camera3.png)
+
+## 概要
+
+Meta-Spaceは、ユーザーがデジタル空間を探索し、インタラクションできる3D仮想環境です。最新のWeb技術を使用して構築されており、ブラウザ上で没入型の体験を提供します。
+
+## 使用技術
+
+- React 19
+- Three.js
+- React Three Fiber
+- React Three Drei
+- TypeScript
+- Vite
+
+## 始め方
+
+### 必要条件
+
+- Node.js（最新のLTSバージョン推奨）
+- npm または yarn
+
+### インストール
+
+1. リポジトリをクローンする
+```bash
+git clone [repository-url]
+cd meta-space
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+2. 依存関係をインストールする
+```bash
+npm install
+# または
+yarn
 ```
+
+3. 開発サーバーを起動する
+```bash
+npm run dev
+# または
+yarn dev
+```
+
+4. ブラウザを開いて `http://localhost:5173` にアクセスする
+
+## 本番用ビルド
+
+```bash
+npm run build
+# または
+yarn build
+```
+
+ビルド成果物は `dist/` ディレクトリに格納されます。
+
+## ライセンス
+
+[MIT](https://choosealicense.com/licenses/mit/)
